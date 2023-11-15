@@ -15,9 +15,9 @@ import lombok.NoArgsConstructor;
 public class ReviewDto {
     private Integer id;
 
-    private ProductDto productDto;
+    private Integer productId;
 
     private String content;
 
-    private UserEntity userEntity;
+    private Integer userId;
 }

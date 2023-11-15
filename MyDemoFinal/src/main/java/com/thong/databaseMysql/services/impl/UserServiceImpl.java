@@ -48,5 +48,10 @@ public class UserServiceImpl implements UserService {
         return result.get(0);
     }
 
+    @Override
+    public List<UserEntity> findAllByIsActiveTrue() {
+        return userRepository.findAllByIsActiveTrue();
+    }
+
 
 }

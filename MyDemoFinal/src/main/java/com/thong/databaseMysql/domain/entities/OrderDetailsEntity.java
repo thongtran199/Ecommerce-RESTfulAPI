@@ -20,11 +20,11 @@ public class OrderDetailsEntity {
     @Column(name = "OrderDetailID")
     private Integer id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "OrderID")
     private OrderEntity orderEntity;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "ProductID")
     private ProductEntity productEntity;
 

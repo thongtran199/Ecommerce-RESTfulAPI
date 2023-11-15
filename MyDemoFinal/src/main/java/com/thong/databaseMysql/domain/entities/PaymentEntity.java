@@ -13,19 +13,22 @@ import lombok.NoArgsConstructor;
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
-@Table(name = "category")
+@Table(name = "payment")
 public class PaymentEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "category_id_seq")
-    @Column(name = "CategoryID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "PaymentID")
     private Integer id;
 
-    @Column(name = "CategoryName")
-    private String categoryName;
+    @Column(name = "CardType")
+    private String cardType;
 
-    @Column(name = "Image")
-    private String image;
+    @Column(name = "CreditCard")
+    private String creditCard;
 
-    @Column(name = "IsActive")
-    private Boolean isActive;
+    @Column(name = "CredExpMo")
+    private Integer credExpMo;
+
+    @Column(name = "CredExpYr")
+    private Integer credExpYr;
 }

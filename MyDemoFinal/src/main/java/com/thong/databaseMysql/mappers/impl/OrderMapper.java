@@ -15,7 +15,11 @@ public class OrderMapper implements Mapper<OrderEntity, OrderDto> {
     }
     @Override
     public OrderDto mapTo(OrderEntity OrderEntity) {
-        return modelMapper.map(OrderEntity, OrderDto.class);
+        OrderDto orderDto =  modelMapper.map(OrderEntity, OrderDto.class);
+        orderDto.setUserId(OrderEntity.getUserEntity().getId());
+        orderDto.setShippingID(OrderEntity.getShipmentEntity().getId());
+        orderDto.setPaymentID(OrderEntity.getPaymentEntity().getId());
+        return orderDto;
     }
 
     @Override

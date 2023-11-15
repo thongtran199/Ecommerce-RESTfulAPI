@@ -20,11 +20,11 @@ public class CartDetailsEntity {
     @Column(name = "CartDetailID")
     private Integer id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "CartID")
     private CartEntity cartEntity;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "ProductID")
     private ProductEntity productEntity;
 

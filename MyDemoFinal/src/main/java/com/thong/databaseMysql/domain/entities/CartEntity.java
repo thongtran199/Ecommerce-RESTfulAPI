@@ -20,7 +20,7 @@ public class CartEntity {
     @Column(name = "CartID")
     private Integer id;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "UserID")
     private UserEntity userEntity;
 

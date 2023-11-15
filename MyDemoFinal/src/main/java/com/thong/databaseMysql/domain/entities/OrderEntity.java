@@ -29,8 +29,9 @@ public class OrderEntity {
     @Column(name = "Total")
     private Float total;
 
-    @Column(name = "PaymentID")
-    private Integer paymentID;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "PaymentID")
+    private PaymentEntity paymentEntity;
 
     @Column(name = "PaymentDate")
     private Date paymentDate;
@@ -38,8 +39,9 @@ public class OrderEntity {
     @Column(name = "OrderDate")
     private Date orderDate;
 
-    @Column(name = "ShippingID")
-    private Integer shippingID;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "ShippingID")
+    private ShipmentEntity shipmentEntity;
 
     @Column(name = "Status")
     private Integer status;

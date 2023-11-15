@@ -18,4 +18,7 @@ public interface UserService {
 
     UserEntity findByUserName(String userName);
 
+    List<UserEntity> findAllByIsActiveTrue();
+
+
 }

@@ -3,6 +3,9 @@ package com.thong.databaseMysql.services.impl;
 import com.thong.databaseMysql.domain.entities.ProductEntity;
 import com.thong.databaseMysql.repositories.ProductRepository;
 import com.thong.databaseMysql.services.ProductService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -39,5 +42,26 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public boolean isExist(Integer id) {
         return productRepository.existsById(id);
+    }
+
+    @Override
+    public List<ProductEntity> findAllByColor(String color) {
+        return productRepository.findAllByColor(color);
+    }
+
+    @Override
+    public List<ProductEntity> findAllByUnitPrice(Float minPrice, Float maxPrice) {
+        return productRepository.findAllByUnitPrice(minPrice, maxPrice);
+    }
+
+    @Override
+    public List<ProductEntity> findAllByProductName(String productName) {
+        return productRepository.findAllByProductName(productName);
+    }
+
+    @Override
+    public Page<ProductEntity> findAllByIsActiveTrue(int page, int size) {
+        PageRequest pageable = PageRequest.of(page, size);
+        return productRepository.findAllByIsActiveTrue(pageable);
     }
 }

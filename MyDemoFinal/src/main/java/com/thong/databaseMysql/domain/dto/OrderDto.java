@@ -17,7 +17,8 @@ import java.sql.Date;
 public class OrderDto {
     private Integer id;
 
-    private UserEntity userEntity;
+//    private UserEntity userEntity;
+    private Integer userId;
 
     private Float total;
 

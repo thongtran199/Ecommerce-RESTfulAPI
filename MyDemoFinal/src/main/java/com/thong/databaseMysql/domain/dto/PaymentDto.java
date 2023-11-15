@@ -14,9 +14,11 @@ import lombok.NoArgsConstructor;
 public class PaymentDto {
     private Integer id;
 
-    private String categoryName;
+    private String cardType;
 
-    private String image;
+    private String creditCard;
 
-    private Boolean isActive;
+    private Integer credExpMo;
+
+    private Integer credExpYr;
 }
