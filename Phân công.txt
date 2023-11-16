@@ -18,5 +18,6 @@ order_detail
 
 review
 shipment
+payment
 product ( tìm kiếm theo tên, theo giá, ... )
 => Linh Quân
