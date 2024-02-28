@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.thong</groupId>
-	<artifactId>MyDemoFinal</artifactId>
+	<artifactId>RESTfulAPIApp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>MyDemoFinal</name>
-	<description>demo connect database</description>
+	<name>RESTfulAPIApp</name>
+	<description>Ecommerce RESTfulAPI Application</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

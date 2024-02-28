@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @Log
-public class MyDemoFinalApplication {
+public class RESTfulAPIApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MyDemoFinalApplication.class, args);
+		SpringApplication.run(RESTfulAPIApp.class, args);
 	}
 
 	}
